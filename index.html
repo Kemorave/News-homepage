@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.google.com/specimen/Red+Hat+Display"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .nav-link {
+        color: black;
+        cursor: pointer;
+      }
+      .nav-link:hover {
+        color: hsl(5, 85%, 63%);
+      }
+    </style>
+  </head>
+  <body class="p-3 justify-center md:px-24 xl:px-[16.5rem]">
+    <header>
+      <nav class="bg-white sm: py-2.5">
+        <div class="container flex items-center justify-between mx-auto">
+          <img src="./assets/images/logo.svg" class="h-5 sm:h-7" alt="Logo" />
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="flex text-black flex-col py-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-xs md:font-medium md:border-0"
+            >
+              <a class="nav-link text-gray-500">Home</a>
+              <a class="nav-link text-gray-500">New</a>
+              <a class="nav-link text-gray-500">Popular</a>
+              <a class="nav-link text-gray-500">Trending</a>
+              <a class="nav-link text-gray-500">Categories</a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="grid grid-cols-1 items-stretch pt-5 lg:grid-cols-3 gap-6">
+      <div class="gap-5 flex flex-col lg:col-span-2">
+        <picture>
+          <source
+            media="(min-width:450px)"
+            srcset="./assets/images/image-web-3-desktop.jpg"
+          />
+          <img
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="Hero"
+            style="width: auto"
+          />
+        </picture>
+
+        <div class="grid grid-cols-1 gap-5 items-center md:grid-cols-2">
+          <p
+            class="text-2xl font-black pr-0 md:text-4xl font-black pr-5"
+            style="color: hsl(240, 100%, 5%)"
+          >
+            The Bright Future of Web 3.0?
+          </p>
+          <div
+            class="flex flex-col gap-7 items-start font-semibold text-slate-500 text-xs"
+          >
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button
+              class="px-5 text-xs tracking-[0.2rem] py-2 bg-[#f15e50] text-white active:bg-[black]"
+            >
+              READ MORE
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-5 p-5 pb-7 flex-col bg-[#00001a]">
+        <p class="text-3xl font-bold text-[#BE9F40]">New</p>
+        <div class="flex flex-col gap-5 divide-y divide-blue-200">
+          <div class="grid gap-2">
+            <p
+              class="text-white text-sm font-semibold hover:text-[#BE9F40] cursor-pointer"
+            >
+              Hydrogen VS Electric Cars
+            </p>
+            <p class="text-slate-400 text-xs">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <div class="grid pt-5 gap-2">
+            <p
+              class="text-white text-sm font-semibold hover:text-[#BE9F40] cursor-pointer"
+            >
+              The Downsides of AI Artistry
+            </p>
+            <p class="text-slate-400 text-xs">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <div class="grid pt-5 gap-2">
+            <p
+              class="text-white text-sm font-semibold hover:text-[#BE9F40] cursor-pointer"
+            >
+              Is VC Funding Drying Up?
+            </p>
+            <p class="text-slate-400 text-xs">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="grid mt-7 grid-cols-1 pt-5 lg:grid-cols-3 gap-5 items-start"
+    >
+      <div class="flex gap-5">
+        <img class="w-20" alt="pc" src="./assets/images/image-retro-pcs.jpg" />
+        <div
+          class="flex flex-col gap-2 place-content-between items-start content-start"
+        >
+          <p class="text-2xl font-semibold text-gray-300">01</p>
+          <p
+            class="text-sm font-bold text-black hover:text-[#f15e50] cursor-pointer"
+          >
+            Reviving Retro PCs
+          </p>
+          <p class="text-slate-600 text-xs">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <img
+          class="w-20"
+          alt="tl"
+          src="./assets/images/image-top-laptops.jpg"
+        />
+        <div
+          class="flex flex-col place-content-between items-start content-start"
+        >
+          <p class="text-3xl font-bold text-gray-300">02</p>
+          <p
+            class="text-sm font-bold text-black hover:text-[#f15e50] cursor-pointer"
+          >
+            Top 10 Laptops of 2022
+          </p>
+          <p class="text-slate-600 text-xs">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <img
+          class="w-20"
+          alt="gg"
+          src="./assets/images/image-gaming-growth.jpg"
+        />
+        <div
+          class="flex flex-col place-content-between items-start content-start"
+        >
+          <p class="text-3xl font-bold text-gray-300">03</p>
+          <p
+            class="text-sm font-bold text-black hover:text-[#f15e50] cursor-pointer"
+          >
+            The Growth of Gaming
+          </p>
+          <p class="text-slate-600 text-xs">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
